@@ -52,4 +52,19 @@ One guy, Linus Torvalds, used GCC to make his operating system (yes, ${name} is 
 (An operating system) != (a distribution). ${name} is an operating system. By my definition, an operating system is that software which provides and limits access to hardware resources on a computer. That definition applies whereever you see ${name} in use. However, ${name} is usually distributed with a collection of utilities and applications to make it easily configurable as a desktop system, a server, a development box, or a graphics workstation, or whatever the user needs. In such a configuration, we have a ${name} (based) distribution. Therein lies your strongest argument for the unwieldy title 'GNU/${name}' (when said bundled software is largely from the FSF). Go bug the distribution makers on that one. Take your beef to Red Hat, Mandrake, and Slackware. At least there you have an argument. ${name} alone is an operating system that can be used in various applications without any GNU software whatsoever. Embedded applications come to mind as an obvious example.`
         });
     },
+    ecmascript(i: Interaction) {
+        // @ts-ignore: No docs
+        const name = i.data.options ?
+            // @ts-ignore: No docs
+            i.data.options.find((e) => e.name == "name")?.value
+            : "Javascript";
+
+        i.respond({
+            content: `I'd just like to interject for a moment. What you're referring to as ${name}, is in fact, ECMAScript, or as I've recently taken to calling it, ECMA's script. ${name} is not a programming language unto itself, but rather one of the various implementations of ECMAScript, providing a runtime environment for ECMAScript specification in the web browser.
+
+Many browsers run a modified version of ECMAScript every day, without realizing it. Through a peculiar turn of events, the version of ECMAScript which is widely used today is often called "${name}", and many of its users are not aware that it is basically ECMAScript, standardized by ECMA International.
+
+There really is a ${name}, and these people are using it, but it is just an implementation of the programming language they use. ${name} is the runtime: the implementation of a programming language which runs the provided code. The runtime is an essential part of the modern web browser, but useless by itself; it can only function in the context of the Document Object Model. ${name} is regularly the default implementation of ECMAScript. All the so-called "${name}" runtimes are simply implementations of ECMAScript.`
+        });
+    },
 }
