@@ -24,6 +24,11 @@ class TagBot extends Client {
         copypasta.archlinux(i);
     }
 
+    @slash()
+    itslinux(i: Interaction) {
+        copypasta.itslinux(i);
+    }
+
     @event()
     ready() {
         console.log("Ready!")

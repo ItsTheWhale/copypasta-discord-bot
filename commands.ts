@@ -24,4 +24,15 @@ export const commands: SlashCommandPartial[] = [
             }
         ],
     },
+    {
+        name: "itslinux",
+        description: "Get Linux not GNU/Linux copypasta.",
+        options: [
+            {
+                name: "name",
+                description: "Name.",
+                type: SlashCommandOptionType.STRING
+            }
+        ],
+    },
 ];
