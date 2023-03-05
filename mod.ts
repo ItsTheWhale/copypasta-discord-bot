@@ -2,10 +2,7 @@ import {
     Client,
     slash,
     event,
-    SlashCommandPartial,
     Interaction,
-    InteractionResponseType,
-    SlashCommandOptionType,
     Intents,
     config
 } from "./deps.ts";
