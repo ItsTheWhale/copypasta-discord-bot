@@ -64,7 +64,24 @@ One guy, Linus Torvalds, used GCC to make his operating system (yes, ${name} is 
 
 Many browsers run a modified version of ECMAScript every day, without realizing it. Through a peculiar turn of events, the version of ECMAScript which is widely used today is often called "${name}", and many of its users are not aware that it is basically ECMAScript, standardized by ECMA International.
 
-There really is a ${name}, and these people are using it, but it is just an implementation of the programming language they use. ${name} is the runtime: the implementation of a programming language which runs the provided code. The runtime is an essential part of the modern web browser, but useless by itself; it can only function in the context of the Document Object Model. ${name} is regularly the default implementation of ECMAScript. All the so-called "${name}" runtimes are simply implementations of ECMAScript.`
+There really is a ${name}, and these people are using it, but it is just an implementation of the programming language they use. ${name} is the runtime: the implementation of a programming language which runs the provided code. The runtime is an essential part of the modern web browser, but useless by itself; it can only function in the context of the Document Object Model. ${name} is regularly the default implementation of ECMAScript. All the so-called "${name}" runtimes are simply implementations of ECMAScript.`.slice(0, 2000)
+        });
+    },
+    itsjavascript(i: Interaction) {
+        // @ts-ignore: No docs
+        const name = i.data.options ?
+            // @ts-ignore: No docs
+            i.data.options.find((e) => e.name == "name")?.value
+            : "Javascript";
+
+        i.respond({
+            content: `No, TC39, it's '${name}', not 'ECMAScript'. The most important contributions that the ECMA made to ${name} were the creation of the Document Object Model and the ECMA-262 specification. Those are fine and inspired products. ECMA-262 is a monumental achievement and has earned you, TC39, and the ECMA countless kudos and much appreciation.
+
+Following are some reasons for you to mull over, including some already answered in your FAQ.
+
+One guy, Brendan Eich, used ECMA-262 to make his programming language (yes, ${name} is a programming language -- more on this later). He named it '${name}' with a little help from his friends. Why doesn't he call it ECMAScript? Because he wrote it, with more help from his friends, not you. You named your stuff, I named my stuff -- including the software I wrote based on ECMA-262 -- and Brendan named his stuff. The proper name is ${name} because Brendan Eich says so. Brendan has spoken. Accept his authority. To do otherwise is to become a nag. You don't want to be known as a nag, do you?
+
+(A programming language) != (a runtime). ${name} is a programming language. By my definition, a programming language is that provides a system of notation for writing computer programs. That definition applies whereever you see ${name} in use. However, ${name} is usually distributed with a collection of utilities and applications to make it easily configurable as a browser, a web server, a development box, or a graphics renderer, or whatever the user needs. In such a configuration, we have a ${name} (based) runtime implementation. Therein lies your strongest argument for the unwieldy title 'ECMAScript' (when said bundled software is largely from the ECMA). Go bug the runtime makers on that one. Take your beef to Google, Microsoft, and Mozilla. At least there you have an argument. ${name} alone is a programming language that can be used in various applications without any ECMA software whatsoever. Embedded runtimes come to mind as an obvious example.`.slice(0, 2000)
         });
     },
 }

@@ -46,4 +46,15 @@ export const commands: SlashCommandPartial[] = [
             }
         ],
     },
+    {
+        name: "itsjavascript",
+        description: "Get JavaScript not ECMAScript copypasta.",
+        options: [
+            {
+                name: "name",
+                description: "Name.",
+                type: SlashCommandOptionType.STRING
+            }
+        ],
+    },
 ];

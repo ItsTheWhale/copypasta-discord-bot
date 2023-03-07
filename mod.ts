@@ -31,11 +31,16 @@ class TagBot extends Client {
         copypasta.ecmascript(i);
     }
 
+    @slash()
+    itsjavascript(i: Interaction) {
+        copypasta.itsjavascript(i);
+    }
+
     @event()
     ready() {
         console.log("Ready!")
         commands.forEach(command => {
-            this.slash.commands.create(command)
+            this.slash.commands.create(command, '999435288478765211')
                 .then((cmd) => console.log(`Created Slash Command ${cmd.name}!`))
                 .catch(() => console.log(`Failed to create ${command.name} command!`));
         })
